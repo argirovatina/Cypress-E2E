@@ -1,7 +1,7 @@
 import { LoginPage } from '../support/pageObjects/loginPage';
 const loginPage = new LoginPage();
-import { ProductItemPage } from '../support/pageObjects/productItemPage';
-const productItemPage = new ProductItemPage(); 
+import { ProductPage } from '../support/pageObjects/productPage';
+const productPage = new ProductPage(); 
 import { HomePage } from '../support/pageObjects/homePage';
 const homePage = new HomePage();
 import { getRandomValueFromArray } from '../support/helpers/getRandomValueFromArray';
@@ -24,7 +24,7 @@ describe('As authenticated user', () => {
         homePage.productsList().then((list) => {
             getRandomValueFromArray(list).click();
         });
-        productItemPage.selectRandomSize();
+        productPage.selectRandomSize();
         // TODO: uncomment, when add after step for emptying cart via API
         // appHeaderComponent.cartCounter().should('contain.text', '1');
         appHeaderComponent.orderButtonFromCart().click();

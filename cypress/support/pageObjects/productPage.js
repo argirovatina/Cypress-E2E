@@ -1,6 +1,6 @@
 import { getRandomValueFromArray } from '../helpers/getRandomValueFromArray'
 
-export class ProductItemPage {
+export class ProductPage {
     constructor() {
         this.sizeDropdown = () => {
             return cy.get('[data-testid="product-order-select-size"]');
